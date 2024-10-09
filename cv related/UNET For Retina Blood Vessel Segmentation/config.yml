@@ -1,0 +1,16 @@
+seed: 123
+
+dataset:
+    size_image: 512
+    path: './Data'
+    num_workers_dataloader: 4
+
+network:
+    loss: DiceBCELoss
+    batch_size: 4
+    num_epochs: 50
+    lr: 1.0e-3
+    device: 'cuda'
+    scheduler_patience: 4
+    early_stopping_patience: 8
+    save_path_model: './Pre-trained/UNet-Retina.pth'
